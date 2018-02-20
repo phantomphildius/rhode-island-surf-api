@@ -1,10 +1,11 @@
 from flask import Flask
+from flask_cors import CORS
 from flask import Response
 from flask import request
 import requests
 import os
 app = Flask(__name__)
-
+CORS(app)
 
 @app.route('/forecast', methods=['GET'])
 def fetch_surf_data():
